@@ -1,0 +1,65 @@
+@font-face{
+    src:url(fonts/Merienda-Bold.ttf);
+    font-family: "Merienda";
+    
+}
+@font-face{
+    src:url(fonts/Boldonse-Regular.ttf);
+    font-family: "Boldonse";
+}
+header{
+    
+    border-bottom: 3px solid hsla(214, 100%, 62%, 0.521);
+    
+}
+h1{
+    float: right;
+    font-size: 75px;
+    color: rgba(6, 139, 255, 0.322);
+    margin-right: 20px;
+    font-family: "Boldonse";
+}
+
+body{
+    background-color: #0b1224;
+    font-size: 20px;
+    font-family: "Merienda";
+    margin-left: 15px;
+    background-image: url('Images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.img-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    
+ 
+}
+.pp {
+  float: right;
+  margin: 0;
+}
+@keyframes customPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pp {
+  transition: filter 0.4s ease-in-out;
+}
+
+.pp:hover{
+    animation: customPulse 2s ease infinite;
+  filter: 
+    drop-shadow(0 0 5px rgba(173, 216, 230, 0.7))
+    drop-shadow(0 0 10px rgba(138, 43, 226, 0.5))
+    drop-shadow(0 0 15px rgba(0, 255, 255, 0.4));
+}

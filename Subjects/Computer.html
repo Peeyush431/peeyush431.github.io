@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="img/png" href="Images/icon.png">
+        <link rel="stylesheet" href="Style.css">
+          
+      <title>COMPUTER SCIENCE</title>
+    </head>
+<body>
+
+    <header>
+      <a href="../index.html" id="hoverLink" title="Peeyush's Study Blog">
+        <img id="hoverImage" src="Images/start.png" alt="Hover Image">
+      </a>
+        
+        <h1 >COMPUTER</h1>
+    </header>
+
+
+  <style>
+                #hoverImage {
+                  width: 320px; 
+                  cursor: pointer;
+                }
+            
+          </style>
+  <script>
+    const img = document.getElementById('hoverImage');
+    const link = document.getElementById('hoverLink');
+
+    const startImage = 'Images/start.png';
+    const endImage = 'Images/end.png';
+    const forwardGif = 'Images/normal.gif';
+    const reverseGif = 'Images/reverse.gif';
+
+    let currentImage = startImage;
+
+    img.addEventListener('mouseenter', () => {
+      img.src = forwardGif;
+      currentImage = forwardGif;
+
+      setTimeout(() => {
+        img.src = endImage;
+        currentImage = endImage;
+      }, getGifDuration(forwardGif));
+    });
+
+    img.addEventListener('mouseleave', () => {
+      img.src = reverseGif;
+      currentImage = reverseGif;
+
+      setTimeout(() => {
+        img.src = startImage;
+        currentImage = startImage;
+      }, getGifDuration(reverseGif));
+    });
+
+    // Intercept click
+    link.addEventListener('click', function (e) {
+      if (currentImage !== endImage) {
+        e.preventDefault(); // Prevent navigation if not on end.png
+      }
+    });
+
+    function getGifDuration(gifName) {
+      switch (gifName) {
+        case forwardGif: return 1000;
+        case reverseGif: return 1000;
+        default: return 1000;
+      }
+    }
+  </script>
+  <style>
+          h1 {text-align: center;}
+          body {
+    background-image: url('Images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+
+  </style>
+ <div class="img-wrapper">
+          <a href="https://pastpapers.papacambridge.com/papers/caie/as-and-a-level-computer-science-for-first-examination-in-2021-9618"> 
+            <img src="Images/pp.PNG" class="pp" width="300px">
+  </div>  </a>
+
+</body>
+
+
+
+</html>
+
+
+

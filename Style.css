@@ -1,0 +1,113 @@
+@font-face{
+    src:url(fonts/Merienda-Bold.ttf);
+    font-family: "Merienda";
+}
+@font-face{
+    src:url(fonts/Boldonse-Regular.ttf);
+    font-family: "Boldonse";
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+header{
+    
+    border-bottom: 3px solid hsla(214, 100%, 62%, 0.521);
+    
+}
+h1{
+    float: right;
+    font-size: 80px;
+    color: rgba(6, 139, 255, 0.322);
+    margin-right: 20px;
+    font-family: "Boldonse";
+}
+body{
+    background-color: #0b1224;
+    font-size: 20px;
+    font-family: "Merienda";
+    margin-left: 15px;
+
+}
+#intro{
+  text-align: center;
+}
+
+.image-row {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-row a {
+  flex: 1;              
+  display: block;       
+}
+
+.image-row img {
+  width: 100%;         
+  height: auto;        
+  display: block;       
+}
+
+
+.image-row img {
+  transition: filter 0.4s ease-in-out;
+}
+
+.image-row img:hover {
+  animation: customPulse 2s ease infinite;
+  filter: 
+    drop-shadow(0 0 6px rgba(173, 216, 230, 0.85))   
+    drop-shadow(0 0 12px rgba(138, 43, 226, 0.6))     
+    drop-shadow(0 0 20px rgba(0, 255, 255, 0.5))      
+    drop-shadow(0 0 30px rgba(0, 255, 255, 0.25));   
+}
+
+
+
+@keyframes customPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.image-row img.clicked {
+  animation: customTranslate 0.5s forwards !important;
+}
+
+@keyframes customTranslate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+.content > *:last-child {
+  margin-bottom: 0;
+}
+main {
+  flex: 1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer{
+  background-color: hsla(197, 100%, 75%, 0.205);
+}
+.footertext{
+  font-family: "Boldonse";
+  font-size: 15px;
+  color: rgba(8, 28, 67, 0.873);
+}

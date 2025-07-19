@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> Peeyush's Study Blog </title>
+      <link rel="icon" type="img/png" href="Images/icon.png">
+      <link rel="stylesheet" href="Style.css">
+
+      <meta charset="UTF-8">
+  </head>
+  <body>
+        <style>
+        #hoverImage {
+          width: 340px; 
+          cursor: pointer;
+        }
+    
+      </style>
+    <div class="container">
+      <header>
+          <h1 >HOMEPAGE</h1>
+        <a href="index.html"
+        title="Peeyush's Study Blog">
+        <img id="hoverImage" src="Images/start.png" alt="Hover Image">
+        </a>
+      </header>
+
+
+      <script>
+        const img = document.getElementById('hoverImage');
+
+      
+        const startImage = 'Images/start.png';
+        const endImage = 'Images/end.png';
+        const forwardGif = 'Images/normal.gif';
+        const reverseGif = 'Images/reverse.gif';
+
+      
+        img.addEventListener('mouseenter', () => {
+          img.src = forwardGif;
+
+          
+          setTimeout(() => {
+            img.src = endImage;
+          }, getGifDuration(forwardGif));
+        });
+
+        
+        img.addEventListener('mouseleave', () => {
+          img.src = reverseGif;
+
+          
+          setTimeout(() => {
+            img.src = startImage;
+          }, getGifDuration(reverseGif));
+        });
+
+        
+        function getGifDuration(gifName) {
+          switch (gifName) {
+            case forwardGif: return 1000; 
+            case reverseGif: return 1000;  
+            default: return 1000;
+          }
+        }
+      </script>
+          <style>
+              h1 {text-align: center;}
+              body {
+        background-image: url('Images/bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+          </style>
+      
+
+      <main>
+          <p id="intro" style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000; color: white; font-size: 20px; ">This is my A-Levels study blog. The following are the subjects I study:</p>
+                    <br>
+              
+              
+              
+              
+              
+          <div class="image-row">
+            <a href="Subjects/Accounts.html" target="_blank" class="animate-on-click">
+              <img id="acc" src="Images/acc.PNG" alt="ACC" title="Go to Accounts">
+            </a>
+            <a href="Subjects/Economics.html" target="_blank" class="animate-on-click">
+              <img id="econ" src="Images/econ.PNG" alt="Econ"title="Go to Economics">
+            </a>
+            <a href="Subjects/Computer.html" target="_blank" class="animate-on-click">
+              <img id="cs" src="Images/cs.PNG" alt="CS"title="Go to Computer">
+            </a>
+            <a href="Subjects/Mathematics.html" target="_blank" class="animate-on-click">
+              <img id="math" src="Images/math.PNG" alt="Math"title="Go to Mathematics">
+            </a>
+          </div>
+
+
+
+
+      <script>
+            window.addEventListener('DOMContentLoaded', () => {
+              document.querySelectorAll('.animate-on-click').forEach(link => {
+                link.addEventListener('click', function (e) {
+                  e.preventDefault(); 
+
+                  const img = this.querySelector('img');
+
+                
+                  img.style.animation = 'none';
+                  void img.offsetWidth;
+                  img.classList.add('clicked');
+
+                  img.addEventListener('animationend', () => {
+                    window.location.href = this.href;
+                  }, { once: true });
+                });
+              });
+            });
+      </script>
+
+        <footer>
+          <p class="footertext">
+            Created in 2025  
+            <br>
+            Email: peeyushlamgade431@gmail.com
+          </p>
+        </footer>
+      </main> 
+  </div>
+</body>
+
+
+</html>
