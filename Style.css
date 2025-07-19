@@ -1,9 +1,9 @@
 @font-face{
-    src:url(fonts/Merienda-Bold.ttf);
+    src:url(Fonts/Merienda-Bold.ttf);
     font-family: "Merienda";
 }
 @font-face{
-    src:url(fonts/Boldonse-Regular.ttf);
+    src:url(Fonts/Boldonse-Regular.ttf);
     font-family: "Boldonse";
 }
 html, body {
